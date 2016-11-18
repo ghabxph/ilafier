@@ -1,0 +1,18 @@
+{
+    "name": "ghabxph/ilafier",
+    "description": "PHP Based File Overwriter (I made this for my girlfriend)",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Lucernas Pascual",
+            "email": "ghabxph.official@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Ilafier\\" : "Ilafier"
+        }
+    }
+}

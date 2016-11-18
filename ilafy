@@ -1,0 +1,27 @@
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Instantiates ArgvValidator, PathValidator, and SrcDestRetriever
+$ArgvValidator = new Ilafier\Validator\ArgvValidator($argv);
+$pathValidator = new Ilafier\Validator\PathValidator();
+$retriever = new Ilafier\SrcDestRetriever($argv);
+
+// Validates argv arguments. Displays help and dies if there's some error in argument.
+$ArgvValidator->validate()->displayHelpAndDieIfInvalid();
+die();
+
+// Retrieve Source to Copy
+$src = $retriever->getSrc();
+
+// Validates src path. If invalid, it will display the error
+$pathValidator->validate($src)->displayErrorAndDieIfInvalid();
+
+// Retrieves Destination to be overwritten
+$dest = $retriever->getDest();
+
+// Validates dest path. If invalid, it will display the error
+$pathValidator->validate($dest)->displayHelpAndDieIfInvalid();
+
+// Ilafying the file ;)
+(new Ilafier\Ilafier())->ilafy($src, $dest);

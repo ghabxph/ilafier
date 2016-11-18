@@ -1,0 +1,19 @@
+Copies all the necessary files needed to be copied from [src-folder] to [dest-folder]. Implemented the best algorithm for this program to select necessary files as fast as possible. 
+
+Usage:
+	php ilafy [src-folder] [dest-folder]
+
+	[src-folder]	- The folder you desire to copy.
+	[dest-folder]	- The folder you wish to be overwritten by the [src-folder]
+
+Expected Output:
+If the src-folder and the dest-folder are both valid, ilafier will display the path of the files that are copied, overwritten and skipped. If the file already exist in [dest-folder] from [src-folder], ilafier will compare the file first, and if it matches, it will be skipped from overwriting. Otherwise, the file would be overwritten from the [src-folder]. If the file from [src-folder] does not exist in the [dest-folder], the file would be simply copied from the [src-folder].
+
+Example:
+php ilafy [src-folder] [dest-folder]
+php ilafy F:\Chemtrek D:\Unity\Chemtrek
+
+Developed by Gabriel Lucernas Pascual (ghabxph):
+https://github.com/ghabxph/ilafier
+
+The name is inspired from the nickname of my girlfriend. And I actually wrote this program for her CS Thesis Project.
