@@ -2,9 +2,12 @@
 
 namespace Ilafier;
 
-class Ilafy{
+use Ilafier\SrcDestRetriever\Source;
+use Ilafier\SrcDestRetriever\Destination;
 
-	function ilafy(string $src, string $dest){
+class Ilafier{
+
+	function ilafy(Source $src, Destination $dest){
 		
 	}
 }
